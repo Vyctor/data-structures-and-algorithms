@@ -41,7 +41,9 @@ void push(struct Stack *stack, int element)
 int pop(struct Stack *stack)
 {
   if (isEmpty(stack))
+  {
     return INT_MIN;
+  }
   return stack->array[stack->top--];
 }
 
@@ -69,5 +71,8 @@ int main()
   push(stack, 30);
   length(stack);
 
+  printf("%d popped from stack\n", pop(stack));
+  printf("%d popped from stack\n", pop(stack));
+  printf("%d popped from stack\n", pop(stack));
   printf("%d popped from stack\n", pop(stack));
 }
